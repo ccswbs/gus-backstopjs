@@ -1,6 +1,7 @@
 # Pre-Requisites
 
 - Install [BackstopJS](https://github.com/garris/BackstopJS)
+- Run `npm ci`
 - Run `backstop init` after installing BackstopJS
 
 # Run tests on a single scenario
