@@ -1,11 +1,9 @@
 # UG BackstopJS Visual Regression Test Suite
-This sweet configuration suite lets you run local BackstopJS visual regression tests on our frontend development. Use it when testing deployed pull requests.
+This sweet suite lets you run local BackstopJS visual regression tests on our frontend development. Use it when testing deployed pull requests.
 
 ## Setup
 
-- Install [BackstopJS](https://github.com/garris/BackstopJS)
-  - Global installation is recommended: `npm install -g backstopjs`
-- Run `npm ci`
+- Run `npm ci` in our main repo directory
 - Add the following environment variables:
   - `BACKSTOPJS_URL`: This is the URL you are testing
   - `BACKSTOPJS_REF`: This is the URL showing how things *should* appear. It will be used to generate your reference screenshots before running visual regression tests.
@@ -19,7 +17,7 @@ This sweet configuration suite lets you run local BackstopJS visual regression t
 
 ## Run a specific test scenario (e.g., just the header)
 
-1. Navigate to `config/scenarios` to see a list of scenarios available for testing.
+1. Navigate to `config/backstop` to see a list of scenarios available for testing.
 1. Take note of the filename associated with the scenario you wish to test (e.g., `uofg-header`).
 1. To generate reference screenshots for that scenario, run `backstop reference --config=./backstop.config.js  --scenario=uofg-header`
 1. To run a visual regression test against those screenshots, run `backstop test --config=./backstop.config.js  --scenario=uofg-header`
@@ -27,7 +25,7 @@ This sweet configuration suite lets you run local BackstopJS visual regression t
 ## Create new scenarios for testing
 You can create additional scenarios for testing our frontend development.
 
-1. Navigate to `config/scenarios` 
+1. Navigate to `./config/backstop` 
 1. Create a copy of `sample-config.js`.
 1. Rename the file using a unique name for the scenario.
 1. Fill in the pathsToTest variable with all the URL aliases you wish to test 
