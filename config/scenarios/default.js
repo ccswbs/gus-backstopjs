@@ -1,8 +1,8 @@
 /*******************************
  SCENARIO-SPECIFIC CONFIGURATION
 ********************************/
-const url = "https://preview-ugconthub.netlify.app";
-const referenceUrl = "https://develop-ugconthub.netlify.app/";
+const url = process.env.BACKSTOPJS_URL;
+const referenceUrl = process.env.BACKSTOPJS_REF;
 const pathsToTest = {
     'Basic Page: Explore All Programs': '/explore-all-programs',
     'Program Page: BAS': '/programs/bachelor-of-applied-science',
@@ -26,9 +26,11 @@ for (let [key, value] of Object.entries(pathsToTest)) {
         clickSelector: "",
         postInteractionWait: 0,
         selectorExpansion: true,
-        selectors: [],
+        selectors: [
+            'document',
+        ],
         readyEvent: null,
-        delay: 20000,
+        delay: 5000,
         misMatchThreshold: 0.1,
         requireSameDimensions: true
     })
