@@ -30,11 +30,11 @@ try {
           width: 320,
           height: 480,
         },
-        {
-          name: "tablet",
-          width: 1024,
-          height: 768,
-        },
+        // {
+        //   name: "tablet",
+        //   width: 1024,
+        //   height: 768,
+        // },
         {
           name: "desktop",
           width: 1920,
